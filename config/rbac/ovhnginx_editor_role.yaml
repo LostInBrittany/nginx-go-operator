@@ -1,0 +1,24 @@
+# permissions for end users to edit ovhnginxes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ovhnginx-editor-role
+rules:
+- apiGroups:
+  - tutorials.ovhcloud.com
+  resources:
+  - ovhnginxes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - tutorials.ovhcloud.com
+  resources:
+  - ovhnginxes/status
+  verbs:
+  - get

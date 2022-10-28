@@ -1,0 +1,7 @@
+apiVersion: tutorials.ovhcloud.com/v1
+kind: OvhNginx
+metadata:
+  name: ovhnginx-sample
+spec:
+  port: 8080
+  replicaCount: 2
